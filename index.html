@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="Wrapper">
+            <div class="divcenter">
+                <h2 class="Header">PASSWORD GENERATOR</h2>
+
+                <!-- Password area -->
+                <div class="output">
+                    <input readonly placeholder="Password" class="display">
+                    <button class="copy_btn">
+                        <span class="copy_message"></span>
+                        <i class="fa fa-copy copy_icon"></i>
+                    </button>
+
+                </div>
+
+                <!-- Generator box -->
+                <div class="box">
+
+                    <div class="length_div">Password Length
+                        <div class="length_count">0</div>
+                    </div>
+
+                    <!-- scroll bar -->
+                    <div class="scroll_bar">
+                        <input type="range" min="6" max="18"
+                            class="scroll_indicator" step="1"
+                            oninput="slidershow()">
+                    </div>
+
+                    <!-- Typos -->
+                    <div class="Restrict">
+                        <div class="input_radio_div">
+                            <input type="checkbox" name="Upper Case" id="UC"
+                                class="tick" />
+                            <label for="UC">Upper Case</label>
+                        </div>
+
+                        <div class="input_radio_div">
+                            <input type="checkbox" name="Lower Case" id="LC"
+                                class="tick" />
+                            <label for="LC">Lower Case</label>
+                        </div>
+
+                        <div class="input_radio_div">
+                            <input type="checkbox" name="Numbers" id="NB"
+                                class="tick" />
+                            <label for="NB">Numbers</label>
+                        </div>
+                        <div class="input_radio_div">
+                            <input type="checkbox" name="Special characters"
+                                id="SC" class="tick" />
+                            <label for="SC">Special characters</label>
+                        </div>
+                    </div>
+
+                    <!--Strength Indicator -->
+                    <div class="strength_indicator">
+                        <span class="display_strength">Strength</span>
+                        <div class="indicator"></div>
+                    </div>
+
+                    <!-- Generate button -->
+                    <button class="generator_password">GENERATE PASSWORD</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://kit.fontawesome.com/58a810656e.js"
+            crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
